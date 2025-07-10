@@ -30,7 +30,7 @@ export default function CargarImagen() {
         formData.append('bits', bits);
 
         try {
-            const res = await axios.post('http://localhost:5000/procesar', formData, {
+            const res = await axios.post('https://MatiBalda20.pythonanywhere.com/procesar', formData, {
                 responseType: 'blob',
             });
 
