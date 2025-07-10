@@ -5,7 +5,7 @@ import numpy as np
 import io
 
 app = Flask(__name__)
-CORS(app, expose_headers=["X-Width", "X-Height", "X-Size-KB"])
+CORS(app, resources={r"/*": {"origins": "*"}}, expose_headers=["X-Width", "X-Height", "X-Size-KB"])
 
 @app.route('/procesar', methods=['POST'])
 def procesar_imagen():
